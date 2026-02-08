@@ -1,0 +1,16 @@
+{
+  "ownerId": "yll08",
+  "slug": "voxtral-stt",
+  "version": "1.0.0",
+  "publishedAt": 1739015000000,
+  "name": "Voxtral Speech-to-Text",
+  "description": "Voice input skill for OpenClaw using Voxtral speech-to-text model",
+  "author": "OpenClaw User",
+  "tags": ["voice", "speech-to-text", "transcription", "audio", "microphone"],
+  "platforms": ["macos"],
+  "requirements": {
+    "dependencies": ["sox"],
+    "voxtral": "~/.openclaw/workspace/voxtral.c/voxtral",
+    "voxtral-model": "~/.openclaw/workspace/voxtral.c/voxtral-model"
+  }
+}
