@@ -101,8 +101,8 @@ transcribe_file() {
     
     echo -e "${YELLOW}📝 Transcribing with Voxtral...${NC}"
     
-    # Run Voxtral
-    if output=$("$VOXTRAL_BIN" -d "$VOXTRAL_MODEL" -i "$audio_file" --silent 2>&1); then
+    # Run Voxtral (suppress debug output)
+    if output=$("$VOXTRAL_BIN" -d "$VOXTRAL_MODEL" -i "$audio_file" --silent 2>/dev/null); then
         echo -e "${GREEN}🎙️ Transcription:${NC}"
         echo ""
         echo "$output"
@@ -124,7 +124,7 @@ mic_mode() {
     echo ""
     
     cd "$VOXTRAL_DIR"
-    ./voxtral -d "$VOXTRAL_MODEL" --from-mic
+    ./voxtral -d "$VOXTRAL_MODEL" --from-mic 2>/dev/null
 }
 
 # Main
