@@ -134,6 +134,7 @@ class VoxtralSkill:
                 cmd,
                 capture_output=True,
                 text=True,
+                stderr=subprocess.DEVNULL,
                 timeout=120
             )
             
@@ -169,6 +170,7 @@ class VoxtralSkill:
                 cmd,
                 capture_output=True,
                 text=True,
+                stderr=subprocess.DEVNULL,
                 timeout=60  # Max 60 seconds of recording
             )
             
